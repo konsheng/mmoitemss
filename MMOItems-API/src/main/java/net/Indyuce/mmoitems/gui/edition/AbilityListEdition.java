@@ -29,7 +29,7 @@ import org.jetbrains.annotations.NotNull;
 public class AbilityListEdition extends EditionInventory {
 	private static final int[] slots = { 19, 20, 21, 22, 23, 24, 25 };
 
-	public AbilityListEdition(Player player, MMOItemTemplate template) {
+	public AbilityListEditions(Player player, MMOItemTemplate template) {
 		super(player, template);
 	}
 
