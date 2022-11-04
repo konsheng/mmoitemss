@@ -18,6 +18,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,8 @@ public class ItemEdition extends EditionInventory {
 		super(player, template);
 	}
 
-	@Override
+	@NotNull
+    @Override
 	public Inventory getInventory() {
 		int min = (page - 1) * slots.length;
 		int max = page * slots.length;

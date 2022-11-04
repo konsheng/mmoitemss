@@ -16,6 +16,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -34,7 +35,8 @@ public class SoundsEdition extends EditionInventory {
 		super(player, template);
 	}
 
-	@Override
+	@NotNull
+    @Override
 	public Inventory getInventory() {
 		Inventory inv = Bukkit.createInventory(this, 54, "Custom Sounds: " + template.getId());
 		int[] slots = { 19, 22, 25, 28, 31, 34, 37, 40, 43 };

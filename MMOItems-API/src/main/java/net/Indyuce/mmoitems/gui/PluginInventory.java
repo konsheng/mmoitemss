@@ -35,6 +35,7 @@ public abstract class PluginInventory implements InventoryHolder {
 	public PlayerData getPlayerData() {
 		return playerData;
 	}
+	//public PlayerData getPlayerData() { return playerData; }
 
 	@Override
 	public abstract Inventory getInventory();

@@ -21,13 +21,15 @@ import net.Indyuce.mmoitems.api.item.template.MMOItemTemplate;
 import net.Indyuce.mmoitems.api.recipe.CraftingType;
 import net.Indyuce.mmoitems.gui.edition.EditionInventory;
 import io.lumine.mythic.lib.api.util.AltChar;
+import org.jetbrains.annotations.NotNull;
 
 public class RecipeListEdition extends EditionInventory {
 	public RecipeListEdition(Player player, MMOItemTemplate template) {
 		super(player, template);
 	}
 
-	@Override
+	@NotNull
+    @Override
 	public Inventory getInventory() {
 		Inventory inv = Bukkit.createInventory(this, 54, "Crafting Recipes: " + template.getId());
 

@@ -27,6 +27,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.UUID;
@@ -59,6 +60,7 @@ public class CraftingStationView extends PluginInventory {
 		recipes = station.getAvailableRecipes(playerData, ingredients);
 	}
 
+	@NotNull
 	@Override
 	public Inventory getInventory() {
 		Inventory inv = Bukkit.createInventory(this, layout.getSize(),

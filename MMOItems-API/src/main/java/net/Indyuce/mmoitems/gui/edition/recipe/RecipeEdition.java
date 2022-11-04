@@ -17,6 +17,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,7 +32,8 @@ public class RecipeEdition extends EditionInventory {
 		this.shapeless = shapeless;
 	}
 
-	@Override
+	@NotNull
+    @Override
 	public Inventory getInventory() {
 		return shapeless ? setupShapelessInventory() : setupShapedInventory();
 	}

@@ -20,6 +20,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -40,6 +41,7 @@ public class ElementsEdition extends EditionInventory {
         maxPage = 1 + (MythicLib.plugin.getElements().getAll().size() - 1) / ELEMENTS_PER_PAGE;
     }
 
+    @NotNull
     @Override
     public Inventory getInventory() {
         Inventory inv = Bukkit.createInventory(this, 54, "Elements: " + template.getId());

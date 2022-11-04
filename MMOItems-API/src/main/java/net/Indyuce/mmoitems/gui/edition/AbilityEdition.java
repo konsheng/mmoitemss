@@ -22,6 +22,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.jetbrains.annotations.NotNull;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -41,7 +42,8 @@ public class AbilityEdition extends EditionInventory {
 		this.configKey = configKey;
 	}
 
-	@Override
+	@NotNull
+    @Override
 	public Inventory getInventory() {
 		Inventory inv = Bukkit.createInventory(this, 54, "Ability Edition");
 		int n = 0;

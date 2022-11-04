@@ -24,6 +24,7 @@ import io.lumine.mythic.lib.MythicLib;
 import io.lumine.mythic.lib.api.item.ItemTag;
 import io.lumine.mythic.lib.api.util.AltChar;
 import io.lumine.mythic.lib.version.VersionMaterial;
+import org.jetbrains.annotations.NotNull;
 
 public class AbilityListEdition extends EditionInventory {
 	private static final int[] slots = { 19, 20, 21, 22, 23, 24, 25 };
@@ -32,7 +33,8 @@ public class AbilityListEdition extends EditionInventory {
 		super(player, template);
 	}
 
-	@Override
+	@NotNull
+    @Override
 	public Inventory getInventory() {
 		Inventory inv = Bukkit.createInventory(this, 54, "Ability List");
 		int n = 0;

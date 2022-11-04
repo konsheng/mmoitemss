@@ -19,6 +19,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +29,8 @@ public class ArrowParticlesEdition extends EditionInventory {
 		super(player, template);
 	}
 
-	@Override
+	@NotNull
+    @Override
 	public Inventory getInventory() {
 		Inventory inv = Bukkit.createInventory(this, 54, "Arrow Particles: " + template.getId());
 		// FileConfiguration config =
